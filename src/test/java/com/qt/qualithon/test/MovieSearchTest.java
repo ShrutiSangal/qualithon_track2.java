@@ -2,6 +2,8 @@ package com.qt.qualithon.test;
 
 import java.lang.reflect.Method;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
 import org.testng.Reporter;
 
@@ -23,6 +25,7 @@ public class MovieSearchTest {
     @BeforeMethod
     public void testSessionSetUp(){
         // init browser test session
+        System.setProperty("webdriver.chrome.driver","C:\\Users\\shruti.sangal\\Downloads\\workbench\\software\\chromedriver.exe");
         this.testSession = TestSession.ChromeTestSession();
     }
 
@@ -80,6 +83,7 @@ public class MovieSearchTest {
             .firstMovieResult();
 
         // get Movie metadata from http://www.omdbapi.com/
+
         Movie movie = new OMDbAPI().getMovie(title);
         assertThat(movieOnImdbWeb.releaseYear()).isEqualTo(movie.releaseYear());
     }

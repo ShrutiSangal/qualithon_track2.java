@@ -90,7 +90,7 @@ public class Movie{
         }
     }
     /**
-     * add movie genre to movie geres list
+     * add movie genre to movie genres list
      *
      * @param   genre   movie genre
      **/
