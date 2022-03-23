@@ -37,6 +37,9 @@ public class OMDbAPI {
         movie.setDirector(movieMetadata.getString("Director"));
         movie.setGenres(movieMetadata.getString("Genre"));
         movie.setWriters(movieMetadata.getString("Writer"));
+        movie.setImdbRating(movieMetadata.getString("imdbRating"));
+        movie.setMaturityRating(movieMetadata.getString("Rated"));
+
         return  movie;
     }
 

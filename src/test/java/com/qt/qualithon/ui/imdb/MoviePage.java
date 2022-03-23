@@ -138,4 +138,21 @@ public class MoviePage extends Page{
         return writers;
     }
 
+
+    public String imdbRating(){
+        return this.testSession.driverWait().until(
+                ExpectedConditions.presenceOfElementLocated(
+                        By.xpath("//*[@id='__next']/main/div/section[1]/section/div[3]/section/section/div[2]/div[2]/div/div[1]/a/div/div/div[2]/div[1]/span[1]")
+                )
+        ).getText();
+    }
+
+    public String maturityRating(){
+        return this.testSession.driverWait().until(
+                ExpectedConditions.presenceOfElementLocated(
+                        By.xpath("//*[@id='__next']/main/div/section[1]/section/div[3]/section/section/div[2]/div[1]/div/ul/li[2]/a")
+                )
+        ).getText();
+    }
+
 }
