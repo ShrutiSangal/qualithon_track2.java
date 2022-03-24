@@ -145,7 +145,7 @@ public class MoviePage extends Page{
     public String imdbRating(){
         return this.testSession.driverWait().until(
                 ExpectedConditions.presenceOfElementLocated(
-                        By.xpath("//*[@id='__next']/main/div/section[1]/section/div[3]/section/section/div[2]/div[2]/div/div[1]/a/div/div/div[2]/div[1]/span[1]")
+                        By.cssSelector("div.sc-db8c1937-0.eGmDjE.sc-94726ce4-4.dyFVGl > div > div:nth-child(1) > a > div > div > div.sc-7ab21ed2-0.fAePGh > div.sc-7ab21ed2-2.kYEdvH > span.sc-7ab21ed2-1.jGRxWM")
                 )
         ).getText();
     }
@@ -153,7 +153,7 @@ public class MoviePage extends Page{
     public String maturityRating(){
         return this.testSession.driverWait().until(
                 ExpectedConditions.presenceOfElementLocated(
-                        By.xpath("//*[@id='__next']/main/div/section[1]/section/div[3]/section/section/div[2]/div[1]/div/ul/li[2]/a")
+                        By.cssSelector("  div.sc-94726ce4-2.khmuXj >div > ul > li:nth-child(2) > a")
                 )
         ).getText();
     }
