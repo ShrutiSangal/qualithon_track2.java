@@ -101,7 +101,7 @@ public class MoviePage extends Page{
     public String releaseYear(){
         return this.testSession.driverWait().until(
             ExpectedConditions.presenceOfElementLocated(
-                By.cssSelector("div.sc-94726ce4-2.khmuXj > div > ul > li:nth-child(1) > a")
+                By.cssSelector("main div section div.sc-94726ce4-0.cMYixt li:nth-child(1) a")
             )
         ).getText();
     }
@@ -153,7 +153,7 @@ public class MoviePage extends Page{
     public String maturityRating(){
         return this.testSession.driverWait().until(
                 ExpectedConditions.presenceOfElementLocated(
-                        By.cssSelector("  div.sc-94726ce4-2.khmuXj >div > ul > li:nth-child(2) > a")
+                        By.cssSelector("main section div.sc-94726ce4-0 li:nth-child(2) > a")
                 )
         ).getText();
     }
