@@ -25,7 +25,6 @@ public class MovieSearchTest {
     @BeforeMethod
     public void testSessionSetUp(){
         // init browser test session
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\shruti.sangal\\Downloads\\workbench\\software\\chromedriver.exe");
         this.testSession = TestSession.ChromeTestSession();
     }
 
